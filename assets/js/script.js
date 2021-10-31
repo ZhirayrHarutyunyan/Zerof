@@ -9,7 +9,11 @@ pathSvg.forEach(item => {
     if (item.hasAttribute('id')) {
         item.style.cursor = 'pointer'
         item.addEventListener('mouseover', function () {
-            item.style.fill = 'rgba(0, 0, 0, .5)'
+            if (item.getAttribute('class', 'selected')) {
+                item.style.fill = 'rgba(169, 15, 15, .6)'
+            } else {
+                item.style.fill = 'rgba(0, 0, 0, .5)'
+            }
         })
         item.addEventListener('mouseout', function () {
             item.style.fill = ''
@@ -36,15 +40,12 @@ pathSvg.forEach(item => {
     })
 });
 
-
 defects.forEach(item => {
-    item.addEventListener('click', (event) => {
-        cursorX = event.pageX
-        cursorY = event.pageY
-        let itemText = item.textContent
-        carSvg.insertAdjacentHTML('beforeend', `<svg width="17" height="17" viewBox="0 0 14.25 14.25" x='${cursorX}' y='${cursorY}'>
-        <circle class="cls-3" cx="7.13" cy="7.13" r="6.5" style="fill: red;"></circle>
-        <text class="cls-4" transform="translate(3.1 10.5)">${itemText}</text>
+    item.addEventListener('click', () => {
+        let itemText = item.textContent.charAt(0).toLocaleLowerCase()
+        carSvg.insertAdjacentHTML('beforeend', `<svg width="15" height="15" viewBox="0 0 15 15" x='${cursorX - 10}' y='${cursorY - 5}'>
+        <circle  cx="7.5" cy="7.5" r="7.5" style="fill: red;"></circle>
+        <text fill='white' transform="translate(3.75 11)">${itemText}</text>
         </svg>`)
         pathSvg.forEach(pathItem => {
             if (pathItem.getAttribute('class', 'active')) {
@@ -54,3 +55,4 @@ defects.forEach(item => {
 
     })
 })
+

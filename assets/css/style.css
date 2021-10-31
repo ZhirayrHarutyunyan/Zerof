@@ -2,7 +2,9 @@
 * {
     outline: 0;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -17,10 +19,6 @@ table {
     border-spacing: 0
 }
 
-button {
-    cursor: pointer;
-    display: inline-block;
-}
 
 body {
     margin: 0;
@@ -30,10 +28,12 @@ body {
 /* normalize css min  end*/
 
 
-.active,.selected {
+.active {
     fill: rgba(0, 0, 0, .5);
 }
-
+.selected {
+    fill: rgba(169, 15, 15, 0.5);
+}
 
 .dropdown {
     position: absolute;

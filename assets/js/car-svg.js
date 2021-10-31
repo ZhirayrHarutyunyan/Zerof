@@ -687,22 +687,10 @@ createCarBlock.insertAdjacentHTML('beforeend', `<svg xmlns="http://www.w3.org/20
    </g>
 </svg>`)
 createCarBlock.insertAdjacentHTML('beforeend', `<ul class="dropdown" data-car-dropdown hidden>
-<li data-defect>
-   <span>Scratch</span>
-</li>
-<li data-defect>
-   <span>Chipping</span>
-</li>
-<li data-defect>
-   <span>Deformation</span>
-</li>
-<li data-defect>
-   <span>Crack</span>
-</li>
-<li data-defect>
-   <span>Break</span>
-</li>
-<li data-defect>
-   <span>Destruction</span>
-</li>
+<li data-defect>Scratch</li>
+<li data-defect>Chipping</li>
+<li data-defect>Deformation</li>
+<li data-defect>Crack</li>
+<li data-defect>Break</li>
+<li data-defect>Destruction</li>
 </ul>`)
