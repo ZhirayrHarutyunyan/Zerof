@@ -49,16 +49,16 @@ defects.forEach(item => {
     item.addEventListener('click', () => {
         let defactsCount = defectsInfo.childElementCount + 1
         let itemDefectTaxt = item.textContent
-        let itemDefectIcon = item.lastElementChild
-        itemDefectIcon.setAttribute('data-id', defactsCount)
-        itemDefectIcon.setAttribute('x', cursorX - 10)
-        itemDefectIcon.setAttribute('y', cursorY - 5)
-        carSvg.appendChild(itemDefectIcon)
+        // let itemDefectIcon = item.lastElementChild
+        // itemDefectIcon.setAttribute('data-id', defactsCount)
+        // itemDefectIcon.setAttribute('x', cursorX - 10)
+        // itemDefectIcon.setAttribute('y', cursorY - 5)
+        // carSvg.appendChild(itemDefectIcon)
 
-        // carSvg.insertAdjacentHTML('beforeend', `<svg class="defect" onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" width="15" height="15" viewBox="0 0 15 15" data-id="${defactsCount}" x='${cursorX - 10}' y='${cursorY - 5}'>
-        // <circle  cx="7.5" cy="7.5" r="7.5"></circle>
-        // <text fill='white' transform="translate(3.75 11)">${itemText.charAt(0).toLocaleLowerCase()}</text>
-        // </svg>`)
+        carSvg.insertAdjacentHTML('beforeend', `<svg class="defect" onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" width="15" height="15" viewBox="0 0 15 15" data-id="${defactsCount}" x='${cursorX - 10}' y='${cursorY - 5}'>
+        <circle  cx="7.5" cy="7.5" r="7.5"></circle>
+        <text fill='white' transform="translate(3.75 11)">${itemDefectTaxt.charAt(0).toLocaleLowerCase()}</text>
+        </svg>`)
 
         pathSvg.forEach(pathItem => {
             if (pathItem.getAttribute('class', 'active')) {
