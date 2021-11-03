@@ -687,10 +687,64 @@ createCarBlock.insertAdjacentHTML('beforeend', `<svg xmlns="http://www.w3.org/20
    </g>
 </svg>`)
 createCarBlock.insertAdjacentHTML('beforeend', `<ul class="dropdown" data-car-dropdown hidden>
-<li data-defect>Scratch</li>
-<li data-defect>Chipping</li>
-<li data-defect>Deformation</li>
-<li data-defect>Crack</li>
-<li data-defect>Break</li>
-<li data-defect>Destruction</li>
+<li data-defect>Scratch
+   <svg class="defect-icon" style="stroke:#ed1c24;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(4.18 11.07)">S</text>
+      </g>
+   </svg>
+</li>
+<li data-defect>Chipping
+   <svg class="defect-icon" style="stroke:#fcee21;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(3.1 11)">C</text>
+      </g>
+   </svg>
+</li>
+<li data-defect>Deformation
+   <svg class="defect-icon" style="stroke:#00a99d;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(4.10 11.10)">d</text>
+      </g>
+   </svg>
+</li>
+<li data-defect>Crack
+   <svg class="defect-icon" style="stroke:#f93;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(3.1 11)">C</text>
+      </g>
+   </svg>
+</li>
+<li data-defect>Break
+   <svg class="defect-icon" style="stroke:blue;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(4.76 11.17)">b</text>
+      </g>
+   </svg>
+</li>
+<li data-defect>Destruction
+   <svg class="defect-icon" style="stroke:#8cc63f;" width="17" height="17" data-defect-icon onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" viewBox="0 0 14.25 14.25" xmlns="http://www.w3.org/2000/svg">
+      <g>
+         <circle cx="7.13" cy="7.13" r="6.5"/>
+         <text style="font-size:11px;font-weight:200;" transform="translate(4.10 11.10)">d</text>
+      </g>
+   </svg>
+</li>
 </ul>`)
+createCarBlock.insertAdjacentHTML('afterend', `<table>
+<thead>
+   <tr>
+      <th>N</th>
+      <th>Element</th>
+      <th>Damage type</th>
+      <th>Coordinate X</th>
+      <th>Coordinate Y</th>
+   </tr>
+</thead>
+<tbody data-defects-info style="counter-reset: counter;"></tbody>
+</table>`)

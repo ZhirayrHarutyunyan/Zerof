@@ -35,6 +35,24 @@ body {
     fill: rgba(169, 15, 15, 0.5);
 }
 
+.defect{
+    cursor: default;
+    fill: red;
+    display: block;
+}
+
+.defect-icon{
+    width: 17px;
+    height: 17px;
+    fill: #fff;
+    stroke-width: 1px;
+    cursor: default;
+}
+
+svg.activate{
+    fill: black;
+}
+
 .dropdown {
     position: absolute;
     background-color: white;
@@ -68,4 +86,18 @@ body {
 
 .dropdown li:hover {
     background-color: #FBD29B;
+}
+
+.counted::before{
+    counter-increment: counter;
+    content: counter(counter) '. ';
+}
+
+td{
+    text-align: center;
+    padding: 5px 0;
+}
+tbody tr:hover,
+.activate{
+    background-color: rgba(0, 0, 0, 0.3);
 }
