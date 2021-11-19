@@ -1,6 +1,6 @@
 let createCarBlock = document.querySelector('#car-svg')
 createCarBlock.insertAdjacentHTML('beforeend', `<svg xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="370" height="479"
+    x="0" y="0" width="370" height="479"
    viewBox="0, 0, 353, 479" style="fill: transparent;" data-car>
    <g data-car-svg>
       <path data-path
