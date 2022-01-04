@@ -31,8 +31,17 @@ body {
 .active {
     fill: rgba(0, 0, 0, .5);
 }
+
 .selected {
     fill: rgba(169, 15, 15, 0.5);
+}
+
+.selected:hover{
+    fill: rgba(169, 15, 15, 0.6);
+}
+
+.select{
+    fill: rgba(0, 0, 0, .3);
 }
 
 .defect{
