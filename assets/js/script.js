@@ -44,17 +44,11 @@ defects.forEach(item => {
     item.addEventListener('click', () => {
         let randomNumber = Math.floor(Math.random() * 10000)
         let itemDefectTaxt = item.textContent
-        // let itemDefectIcon = item.lastElementChild
-        // itemDefectIcon.setAttribute('data-id', randomNumber)
-        // itemDefectIcon.setAttribute('x', cursorX - 10)
-        // itemDefectIcon.setAttribute('y', cursorY - 5)
-        // carSvg.appendChild(itemDefectIcon)
-
-        carSvg.insertAdjacentHTML('beforeend', `<svg class="defect" onmouseover="addActiveDefect(this)" onmouseout="removeActiveDefect()" width="15" height="15" viewBox="0 0 15 15" data-id="${randomNumber}" x='${cursorX - 10}' y='${cursorY - 5}'>
-        <circle  cx="7.5" cy="7.5" r="7.5"></circle>
-        <text fill='white' transform="translate(3.75 11)">${itemDefectTaxt.charAt(0).toLocaleLowerCase()}</text>
-        </svg>`)
-
+        let itemDefectIcon = item.querySelector('[data-defect-icon]').cloneNode(true)
+        itemDefectIcon.setAttribute('data-id', randomNumber)
+        itemDefectIcon.setAttribute('x', cursorX - 10)
+        itemDefectIcon.setAttribute('y', cursorY - 5)
+        carSvg.appendChild(itemDefectIcon)
         pathSvg.forEach(pathItem => {
             if (pathItem.getAttribute('class', 'active')) {
                 pathItem.classList.add('selected')
